@@ -25,6 +25,12 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  webpack: (config) => {
+    config.optimization.minimizer = config.optimization.minimizer.filter(
+      (minimizer) => minimizer.constructor.name !== 'CssMinimizerPlugin'
+    )
+    return config
+  },
 };
 
 export default nextConfig;
