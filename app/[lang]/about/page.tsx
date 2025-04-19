@@ -5,7 +5,8 @@ import type { Locale } from "@/types"
 import MotionSection from "@/components/animations/motion-section"
 import FadeIn from "@/components/animations/fade-in"
 import StaggerChildren from "@/components/animations/stagger-children"
-import fotka from "@/public/about.jpg"
+import collab from "@/public/strategic-planning-session.png"
+import { Badge } from "@/components/ui/badge"
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(params.lang)
@@ -32,7 +33,7 @@ export default async function About({ params }: { params: { lang: Locale } }) {
         </FadeIn>
         <FadeIn direction="left" className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-2xl">
           <Image
-            src="/collaborative-office-discussion.png"
+            src={collab}
             alt={dict.about.imageAlt}
             fill
             className="object-cover"
@@ -40,6 +41,17 @@ export default async function About({ params }: { params: { lang: Locale } }) {
             priority
           />
         </FadeIn>
+        <div className="flex gap-4">
+          <Badge className="bg-gold-500 text-white text-md">
+            Efficiency
+          </Badge>
+          <Badge className="bg-gold-500 text-white text-md">
+            Productivity
+          </Badge>
+          <Badge className="bg-gold-500 text-white text-md">
+            Determination
+          </Badge>
+        </div>
       </MotionSection>
     </div>
   )
