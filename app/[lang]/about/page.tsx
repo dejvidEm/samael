@@ -5,6 +5,7 @@ import type { Locale } from "@/types"
 import MotionSection from "@/components/animations/motion-section"
 import FadeIn from "@/components/animations/fade-in"
 import StaggerChildren from "@/components/animations/stagger-children"
+import fotka from "@/public/about.jpg"
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(params.lang)
@@ -50,7 +51,7 @@ export default async function About({ params }: { params: { lang: Locale } }) {
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative h-64 w-full mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/about.jpg"
+                  src={fotka}
                   alt={member.name}
                   fill
                   className="object-cover"

@@ -69,8 +69,8 @@ export const sk = {
       subtitle: "Vyberte si balík, ktorý vyhovuje vašim podnikateľským potrebám",
       packages: [
         {
-          name: "Startup",
-          price: "€999",
+          name: "Starter Package",
+          price: "€1799",
           description: "Ideálne pre nové podniky, ktoré chcú vybudovať pevný základ",
           features: [
             "Počiatočné hodnotenie podnikania",
@@ -82,8 +82,8 @@ export const sk = {
           cta: "Začnite",
         },
         {
-          name: "Rast",
-          price: "€2,499",
+          name: "Monthly representation",
+          price: "€499",
           description: "Ideálne pre etablované podniky, ktoré sa chcú rozširovať",
           features: [
             "Komplexná analýza podnikania",

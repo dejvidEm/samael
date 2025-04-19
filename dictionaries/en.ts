@@ -69,8 +69,8 @@ export const en = {
       subtitle: "Choose the package that fits your business needs",
       packages: [
         {
-          name: "Startup",
-          price: "€999",
+          name: "Starter Package",
+          price: "€1799",
           description: "Perfect for new businesses looking to establish a solid foundation",
           features: [
             "Initial business assessment",
@@ -82,8 +82,8 @@ export const en = {
           cta: "Get Started",
         },
         {
-          name: "Growth",
-          price: "€2,499",
+          name: "Monthly Representation",
+          price: "€499",
           description: "Ideal for established businesses looking to scale and expand",
           features: [
             "Comprehensive business analysis",

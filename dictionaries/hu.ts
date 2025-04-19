@@ -70,8 +70,8 @@ export const hu = {
       subtitle: "Válassza az üzleti igényeinek megfelelő csomagot",
       packages: [
         {
-          name: "Startup",
-          price: "€999",
+          name: "Starter Package",
+          price: "€1799",
           description: "Tökéletes új vállalkozások számára, amelyek szilárd alapot szeretnének létrehozni",
           features: [
             "Kezdeti üzleti értékelés",
@@ -83,8 +83,8 @@ export const hu = {
           cta: "Kezdje el",
         },
         {
-          name: "Növekedés",
-          price: "€2,499",
+          name: "Monthly Representation",
+          price: "€499",
           description: "Ideális a már működő vállalkozások számára, amelyek bővülni és terjeszkedni szeretnének",
           features: [
             "Átfogó üzleti elemzés",
