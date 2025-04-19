@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import space from "@/public/logo_footer.png"
+import logo from "@/public/logo-transparent.png"
 
 interface FooterProps {
   dictionary: {
@@ -25,11 +27,11 @@ export default function Footer({ dictionary }: FooterProps) {
           {/* Logo and Description */}
           <div>
             <Image
-              src="/logo-transparent.png"
+              src={logo}
               alt="Samael Consulting"
               width={150}
               height={50}
-              className="h-12 w-auto mb-4"
+              className="h-24 w-auto mb-4"
             />
             <p className="text-gray-400 mt-4 max-w-xs">
               Samael Consulting - your trusted partner for business growth and success.
@@ -124,9 +126,16 @@ export default function Footer({ dictionary }: FooterProps) {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <div className="border-t flex flex-col border-gray-800 mt-12 pt-8 text-center items-center justify-center text-gray-500">
+        <Image
+              src={space}
+              alt="Samael Consulting"
+              width={150}
+              height={50}
+              className="h-4 w-auto mb-4"
+            />
           <p>
-            {dictionary.copyright} © {new Date().getFullYear()} Samael Consulting. All rights reserved.
+            {dictionary.copyright} © {new Date().getFullYear()} Samael Consulting. All rights reserved. Created by SpaceSolutions
           </p>
         </div>
       </div>
