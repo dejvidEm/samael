@@ -41,31 +41,6 @@ export default async function About({ params }: { params: { lang: Locale } }) {
           />
         </FadeIn>
       </MotionSection>
-
-      <MotionSection className="mt-20" delay={0.2}>
-        <FadeIn>
-          <h2 className="text-3xl font-bold mb-10 text-center text-navy-900">{dict.about.teamTitle}</h2>
-        </FadeIn>
-        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.15}>
-          {dict.about.team.map((member, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-64 w-full mb-4 rounded-lg overflow-hidden">
-                <Image
-                  src={fotka}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-navy-900">{member.name}</h3>
-              <p className="text-gold-600 mb-3">{member.position}</p>
-              <p className="text-gray-600">{member.bio}</p>
-            </div>
-          ))}
-        </StaggerChildren>
-      </MotionSection>
     </div>
   )
 }

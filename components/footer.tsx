@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
-import foto from "@/public/cropped.png"
 
 interface FooterProps {
   dictionary: {
@@ -26,7 +25,7 @@ export default function Footer({ dictionary }: FooterProps) {
           {/* Logo and Description */}
           <div>
             <Image
-              src={foto}
+              src="/logo-transparent.png"
               alt="Samael Consulting"
               width={150}
               height={50}
@@ -115,11 +114,11 @@ export default function Footer({ dictionary }: FooterProps) {
               </li>
               <li className="text-gray-400">
                 <span className="block text-sm text-gold-500/80">{dictionary.phone}</span>
-                +421 123 456 788
+                +421 950 735 422
               </li>
               <li className="text-gray-400">
                 <span className="block text-sm text-gold-500/80">{dictionary.email}</span>
-                info@samaelconsulting.com
+                samaelconsulting@icloud.com
               </li>
             </ul>
           </div>
