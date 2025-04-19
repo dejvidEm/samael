@@ -115,7 +115,7 @@ export default function Footer({ dictionary }: FooterProps) {
               </li>
               <li className="text-gray-400">
                 <span className="block text-sm text-gold-500/80">{dictionary.phone}</span>
-                +421 123 456 789
+                +421 123 456 788
               </li>
               <li className="text-gray-400">
                 <span className="block text-sm text-gold-500/80">{dictionary.email}</span>
