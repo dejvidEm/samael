@@ -50,7 +50,7 @@ export default async function About({ params }: { params: { lang: Locale } }) {
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative h-64 w-full mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src={`/strategic-planning-session.png`}
+                  src="/about.jpg"
                   alt={member.name}
                   fill
                   className="object-cover"

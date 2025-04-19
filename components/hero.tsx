@@ -1,9 +1,10 @@
 "use client"
 
-import { useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import fotka from "@/public/img_business.jpg"
+
 
 interface HeroProps {
   dictionary: {
@@ -15,13 +16,6 @@ interface HeroProps {
 }
 
 export default function Hero({ dictionary }: HeroProps) {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7 // Slow down the video slightly
-    }
-  }, [])
 
   const titleVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -62,18 +56,21 @@ export default function Hero({ dictionary }: HeroProps) {
   }
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+    <section className="relative w-full h-screen min-h-[600px] -top-24 flex items-center overflow-hidden">
       {/* Background Image/Video */}
       <div className="absolute inset-0 z-0">
-        {/* Fallback image that loads immediately */}
+        
+        {/* Fallback image */}
         <Image
-          src="/urban-workspace.png"
+          src="/img_business.jpg"
           alt="Business workspace"
           fill
           priority
           className="object-cover"
           sizes="100vw"
+          style={{ display: 'none' }}
         />
+        
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/90 to-navy-900/70"></div>
       </div>
 
@@ -81,7 +78,7 @@ export default function Hero({ dictionary }: HeroProps) {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
             initial="hidden"
             animate="visible"
             variants={titleVariants}
@@ -90,7 +87,7 @@ export default function Hero({ dictionary }: HeroProps) {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-gray-200 mb-8"
+            className="text-xl md:text-xl text-gray-200 mb-8"
             initial="hidden"
             animate="visible"
             variants={subtitleVariants}
@@ -110,7 +107,7 @@ export default function Hero({ dictionary }: HeroProps) {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10 font-medium text-lg px-8"
+              className="border-white text-gold-600 hover:bg-white/10 font-medium text-lg px-8"
             >
               {dictionary.secondaryCta}
             </Button>

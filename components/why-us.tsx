@@ -3,6 +3,7 @@ import { CheckCircle } from "lucide-react"
 import MotionSection from "./animations/motion-section"
 import FadeIn from "./animations/fade-in"
 import StaggerChildren from "./animations/stagger-children"
+import fotka from "@/public/why_us.png"
 
 interface WhyUsProps {
   dictionary: {
@@ -42,7 +43,7 @@ export default function WhyUs({ dictionary }: WhyUsProps) {
           <FadeIn direction="left" className="order-1 lg:order-2">
             <div className="relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="/strategic-executive-discussion.png"
+                src={fotka}
                 alt="Why choose Samael Consulting"
                 fill
                 className="object-cover"

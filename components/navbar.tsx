@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import LanguageSwitcher from "./language-switcher"
 import type { Locale } from "@/types"
+import foto from "@/public/cropped.png"
 
 interface NavbarProps {
   dictionary: {
@@ -67,14 +68,14 @@ export default function Navbar({ dictionary, lang }: NavbarProps) {
         scrolled ? "bg-white shadow-md" : "bg-white/80 backdrop-blur-md border-b border-gray-200"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center">
           <Image
-            src="/logo-transparent.png"
+            src={foto}
             alt="Samael Consulting"
             width={150}
             height={50}
-            className="h-12 w-auto"
+            className="h-16 w-auto"
             priority
           />
         </Link>
@@ -91,7 +92,9 @@ export default function Navbar({ dictionary, lang }: NavbarProps) {
             {dictionary.contact}
           </Link>
           <LanguageSwitcher currentLang={lang} />
+          <Link href={`/${lang}/contact`}>
           <Button className="bg-navy-900 hover:bg-navy-800 text-white">{dictionary.contact}</Button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}

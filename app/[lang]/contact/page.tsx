@@ -22,10 +22,8 @@ export default async function Contact({ params }: { params: { lang: Locale } }) 
   return (
     <div className="container mx-auto px-4 py-16 max-w-6xl">
       <h1 className="text-4xl font-bold mb-8">{dict.contact.title}</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="prose max-w-none">
-          <p>{dict.contact.description}</p>
-        </div>
+      <div className="grid max-w-[800px] gap-8">
+        
         <div className="bg-white rounded-xl p-8 shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-navy-900">{dict.contact.formTitle}</h2>
           <ContactForm dictionary={dict.contact.form} lang={params.lang} />

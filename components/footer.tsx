@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import foto from "@/public/cropped.png"
 
 interface FooterProps {
   dictionary: {
@@ -25,7 +26,7 @@ export default function Footer({ dictionary }: FooterProps) {
           {/* Logo and Description */}
           <div>
             <Image
-              src="/logo-transparent.png"
+              src={foto}
               alt="Samael Consulting"
               width={150}
               height={50}
