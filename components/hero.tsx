@@ -2,9 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Image from "next/image"
-import fotka from "@/public/img_business.jpg"
 
+import video from "@/public/videos/business_video.mp4"
 
 interface HeroProps {
   dictionary: {
@@ -57,20 +56,19 @@ export default function Hero({ dictionary }: HeroProps) {
 
   return (
     <section className="relative w-full h-screen min-h-[600px] -top-24 flex items-center overflow-hidden">
-      {/* Background Image/Video */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        
-        {/* Fallback image */}
-        <Image
-          src="/img_business.jpg"
-          alt="Business workspace"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-          style={{ display: 'none' }}
-        />
-        
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={video} type="video/mp4" />
+          Tvoj prehliadač nepodporuje HTML5 video.
+        </video>
+
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/90 to-navy-900/70"></div>
       </div>
 
